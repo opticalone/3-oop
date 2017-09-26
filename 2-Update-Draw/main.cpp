@@ -2,7 +2,7 @@
 #include "sfwdraw.h"
 #include "player.h"
 
-
+ 
 int main()
 {
 	//create a window and drawing context
