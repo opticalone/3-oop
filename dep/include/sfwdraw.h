@@ -231,7 +231,7 @@ namespace sfw
 
 	// All other inputs. But we don't know what is what.
 	unsigned	getNumGamepadButtons(unsigned gamepadIndex);
-
+	
 	// Supposing we know which axis is which, we can fetch a -1 to 1 value as to its state.
 	float		getGamepadAxis(unsigned gamepadIndex, unsigned axisIndex, float deadzone = GAMEPAD_DEADZONE_THRESHOLD);
 
