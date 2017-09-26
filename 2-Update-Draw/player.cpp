@@ -3,6 +3,7 @@
 
 void PLayer::update()
 {
+	
 	if (sfw::getKey('W'))
 	{
 		y +=10; 
@@ -23,7 +24,9 @@ void PLayer::update()
 
 void PLayer::draw()
 {
-	sfw::drawCircle(x, y, 30, 12 , 0xFFB511FF);
+	unsigned int imgDB = sfw::loadTextureMap("res/db.png");
+	sfw::drawTexture(imgDB, x, y, 248, 320, sfw::getTime() * 350);
+	/*sfw::drawCircle(x, y, 30, 12 , 0xFFB511FF);*/
 }
 
 void Player2::update()

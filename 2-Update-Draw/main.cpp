@@ -7,6 +7,7 @@ int main()
 {
 	//create a window and drawing context
 	sfw::initContext(600, 600, "FuckNazis");
+	unsigned int imgDB = sfw::loadTextureMap("res/db.png");
 
 	//set background color
 	sfw::setBackgroundColor(0x3C1053FF);
@@ -22,6 +23,7 @@ int main()
 	Laser pew;
 
 
+
 	//set up game loop
 	while (sfw::stepContext())
 	{
@@ -32,12 +34,11 @@ int main()
 		
 		you.update();
 		you.draw();
-
+		/*sfw::drawTexture(imgDB, 0, 0, 248, 320, sfw::getTime()*100 );*/
 
 		if (sfw::getMouseButton (0))
 		{
-pew.update(me, you);
-		
+		pew.update(me, you);
 		pew.ldraw();
 
 		}
@@ -61,7 +62,7 @@ pew.update(me, you);
 			me.x = 600;
 		}
 
-	
+		std::cout << me.x << ", " << me.y << std::endl; 
 
 	}
 
