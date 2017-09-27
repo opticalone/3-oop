@@ -1,10 +1,11 @@
 #include "emitter.h"
+
 #include "sfwdraw.h"
 
 Emitter::Emitter()
 {
 	for (int i = 0; i < 100; i++)
-		Particles[i].enabled = true;
+		particles[i].enabled = true;
 	spawnAccumulator = 0.0f;
 }
 
@@ -15,7 +16,7 @@ void Emitter::update()
 	{
 		for (int i = 0; i < 100; i++)
 		{
-			if (particles[i].enabled==false)
+			if (particles[i].enabled == false)
 			{
 				BaseParticle& baby = particles[i];
 				baby.x = 400;
@@ -35,7 +36,18 @@ void Emitter::update()
 	{
 		if (particles[i].enabled = true)
 		{
-			particles.i = update;
+			particles[i].update();
+		}
+	}
+}
+
+void Emitter::draw()
+{
+	for (int i = 0; i < 100; ++i)
+	{
+		if (particles[i].enabled = true)
+		{
+			particles[i].draw();
 		}
 	}
 }

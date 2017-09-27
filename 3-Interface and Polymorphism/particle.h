@@ -1,14 +1,14 @@
 #pragma once
+#include "GameObject.h"
 class BaseParticle : public GameObject
 {
 public:
 
 
-	float x;
-	float y;
+
 	float speedX;
 	float speedY;
 
-	virtual void update() override;
-	virtual void draw() override;
+	virtual void update();
+	virtual void draw();
 };

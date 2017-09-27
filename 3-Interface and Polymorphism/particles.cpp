@@ -12,7 +12,4 @@ void BaseParticle::update()
 	y = +speedY;
 }
 
-void BoxParticle::draw()
-{
-	float halfx = 
-}
+

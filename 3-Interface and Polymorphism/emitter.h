@@ -9,7 +9,7 @@ class Emitter : public GameObject
 public:
 	Emitter();
 
-	BaseParticele particles[100];
+	BaseParticle particles[100];
 
 	int particleID;
 	float spawnInt;
